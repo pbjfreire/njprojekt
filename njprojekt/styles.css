@@ -1,0 +1,42 @@
+css
+
+body {
+  font-family: Arial, sans-serif;
+  background: #fff;
+  color: #000;
+  text-align: center;
+  margin: 20px;
+  line-height: 1.5;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+a {
+  color: blue;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: red;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin: 10px 0;
+}
+
+img {
+  max-width: 100px; /* Small thumbnail for Web 1.0 */
+  border: 1px solid #000;
+}
+
+p {
+  font-size: 16px;
+}
+
