@@ -1,60 +1,53 @@
-/* Base Styles */
+/* Reset default margins/padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styles */
 body {
   font-family: Arial, sans-serif;
   background: #fff;
   color: #000;
   text-align: center;
-  margin: 20px;
   line-height: 1.5;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
 }
 
-/* Header & Banner Styles */
+/* HEADER - Critical banner styles */
 header {
   width: 100%;
-  margin: 0 auto;
-  text-align: center;
-  position: relative;
+  background: #f0f0f0; /* Fallback if image doesn't load */
 }
 
 header img.banner {
-  width: 100%;
+  width: 100vw; /* Full viewport width */
   max-width: 1200px;
   height: auto;
   display: block;
   margin: 0 auto;
-  border: none; /* Remove any default borders */
+  object-fit: contain; /* Prevents distortion */
 }
 
-/* Content Styles */
+/* Content area */
 main {
   flex: 1;
-  padding: 20px 0;
+  padding: 2rem;
   max-width: 800px;
   margin: 0 auto;
 }
 
-h1 {
-  font-size: 24px;
-  margin: 20px 0;
-}
-
-p {
-  font-size: 16px;
-  margin: 10px 0;
-}
-
-/* Navigation Styles */
+/* Navigation */
 ul {
   list-style: none;
-  padding: 0;
-  margin: 20px 0;
+  margin: 1.5rem 0;
 }
 
 li {
-  margin: 15px 0;
+  margin: 1rem 0;
 }
 
 a {
@@ -65,39 +58,22 @@ a {
 
 a:hover {
   color: red;
-  text-decoration: none;
 }
 
-/* Thumbnail Styles */
-.content-thumbnail {
-  max-width: 100px;
-  border: 1px solid #000;
-  margin: 10px;
-}
-
-/* Footer Styles */
+/* Footer */
 footer {
-  margin-top: 40px;
-  padding: 20px 0;
-  border-top: 1px solid #eee;
+  padding: 1rem;
+  background: #f5f5f5;
 }
 
-/* Responsive Adjustments */
-@media (max-width: 600px) {
-  body {
-    margin: 10px;
-  }
-  
+/* Mobile responsiveness */
+@media (max-width: 768px) {
   header img.banner {
-    max-width: 100%; /* Allow full width on mobile */
+    width: 100%;
+    height: auto;
   }
   
-  h1 {
-    font-size: 20px;
+  main {
+    padding: 1rem;
   }
-}
-
-/* Optional: Add a subtle transition for hover effects */
-a, img {
-  transition: all 0.3s ease;
 }
