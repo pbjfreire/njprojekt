@@ -4,17 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NJ Projekt - Comics & Art</title>
-  <link rel="stylesheet" href="styles.css?v=final-fix">
+  <link rel="stylesheet" href="styles.css?v=centered-final">
   <style>
-    /* Inline critical CSS to prevent FOUC */
-    body { 
-      background: white !important; 
+    /* Critical CSS (loads first) */
+    body {
+      background: white !important;
+      text-align: center !important;
       margin: 0;
       padding: 0;
     }
     ul {
       list-style: none !important;
       padding-left: 0 !important;
+      display: inline-block !important;
+      text-align: left !important;
     }
   </style>
 </head>
