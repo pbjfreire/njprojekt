@@ -31,8 +31,9 @@ li {
   margin: 10px 0;
 }
 
-img {
-  max-width: 100px; /* Small thumbnail for Web 1.0 */
+/* Replace the generic img rule with this: */
+.content-thumbnail { /* Use class for thumbnails instead */
+  max-width: 100px;
   border: 1px solid #000;
 }
 
@@ -55,4 +56,11 @@ header img.banner {
   display: block;
   max-width: 1200px; /* Matches your image width */
   margin: 0 auto; /* Centers the image horizontally */
+}
+
+/* Add this for better mobile spacing */
+@media (max-width: 600px) {
+  body {
+    margin: 10px;
+  }
 }
