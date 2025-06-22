@@ -1,4 +1,4 @@
-/* ===== HARD RESET ===== */
+/* ===== NUCLEAR RESET ===== */
 * {
   margin: 0;
   padding: 0;
@@ -9,7 +9,7 @@ html, body {
   width: 100%;
   min-height: 100vh;
   background: white !important;
-  overflow-x: hidden;
+  text-align: center !important;
 }
 
 /* ===== BANNER ===== */
@@ -21,6 +21,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  margin: 0 auto;
 }
 
 .banner {
@@ -30,34 +31,42 @@ header {
   object-fit: contain;
 }
 
-/* ===== CONTENT ===== */
+/* ===== CENTERED CONTENT ===== */
 main {
   max-width: 800px;
   margin: 2rem auto;
   padding: 0 20px;
+  text-align: center !important;
 }
 
-/* ===== BULLET POINT FIX ===== */
-ul, .main-menu, #navigation, [role="list"] {
+/* ===== PERFECTLY CENTERED LIST ===== */
+ul {
   list-style: none !important;
   padding-left: 0 !important;
-  margin-left: 0 !important;
+  margin: 1.5rem auto !important;
+  display: inline-block !important;
+  text-align: left !important;
 }
 
-ul li::before {
-  content: "" !important;
-  display: none !important;
+ul li {
+  margin: 1rem 0;
+  text-align: center !important;
 }
 
 /* ===== FOOTER ===== */
 footer {
   padding: 1.5rem;
   background: white;
+  text-align: center !important;
 }
 
 /* ===== MOBILE ===== */
 @media (max-width: 768px) {
   header {
     height: 60vh;
+  }
+  
+  ul {
+    width: 100% !important;
   }
 }
