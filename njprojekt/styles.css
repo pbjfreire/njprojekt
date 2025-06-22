@@ -1,5 +1,4 @@
-css
-
+/* Base Styles */
 body {
   font-family: Arial, sans-serif;
   background: #fff;
@@ -7,60 +6,98 @@ body {
   text-align: center;
   margin: 20px;
   line-height: 1.5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header & Banner Styles */
+header {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+}
+
+header img.banner {
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border: none; /* Remove any default borders */
+}
+
+/* Content Styles */
+main {
+  flex: 1;
+  padding: 20px 0;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 h1 {
   font-size: 24px;
+  margin: 20px 0;
+}
+
+p {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+/* Navigation Styles */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+li {
+  margin: 15px 0;
 }
 
 a {
   color: blue;
   text-decoration: underline;
+  font-weight: bold;
 }
 
 a:hover {
   color: red;
+  text-decoration: none;
 }
 
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-li {
-  margin: 10px 0;
-}
-
-/* Replace the generic img rule with this: */
-.content-thumbnail { /* Use class for thumbnails instead */
+/* Thumbnail Styles */
+.content-thumbnail {
   max-width: 100px;
   border: 1px solid #000;
+  margin: 10px;
 }
 
-p {
-  font-size: 16px;
+/* Footer Styles */
+footer {
+  margin-top: 40px;
+  padding: 20px 0;
+  border-top: 1px solid #eee;
 }
 
-/* Makes header full-width with the banner centered */
-header {
-  width: 100%;
-  overflow: hidden; /* Ensures no overflow if image is larger than container */
-  margin: 0 auto;
-  text-align: center; /* Centers the image if it's not full-width */
-}
-
-/* Styles for your banner image */
-header img.banner {
-  width: 100%;
-  height: auto;
-  display: block;
-  max-width: 1200px; /* Matches your image width */
-  margin: 0 auto; /* Centers the image horizontally */
-}
-
-/* Add this for better mobile spacing */
+/* Responsive Adjustments */
 @media (max-width: 600px) {
   body {
     margin: 10px;
   }
+  
+  header img.banner {
+    max-width: 100%; /* Allow full width on mobile */
+  }
+  
+  h1 {
+    font-size: 20px;
+  }
+}
+
+/* Optional: Add a subtle transition for hover effects */
+a, img {
+  transition: all 0.3s ease;
 }
