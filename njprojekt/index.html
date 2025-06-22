@@ -1,19 +1,18 @@
 <!DOCTYPE html>
-<html lang="en" data-cf-pages>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NJ Projekt - Comics & Art</title>
-  <link rel="stylesheet" href="styles.css?v=4">
-  <link rel="preload" href="images/banner-1000x750.webp" as="image" type="image/webp">
-  <!-- Critical CSS -->
+  <link rel="stylesheet" href="styles.css?v=5">
   <style>
+    /* Critical CSS - loads first */
     header {
       width: 100%;
-      background: #f0f0f0;
       overflow: hidden;
+      position: relative;
     }
-    header img.banner {
+    .banner {
       width: 100%;
       height: auto;
       display: block;
@@ -22,13 +21,11 @@
 </head>
 <body>
   <header>
-    <img src="images/banner.png"
+    <img src="images/banner.png" 
          alt="NJ Projekt Banner"
          class="banner"
          width="1000"
-         height="750"
-         loading="eager"
-         decoding="async">
+         height="750">
   </header>
 
   <main>
