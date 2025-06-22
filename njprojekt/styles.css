@@ -40,3 +40,19 @@ p {
   font-size: 16px;
 }
 
+/* Makes header full-width with the banner centered */
+header {
+  width: 100%;
+  overflow: hidden; /* Ensures no overflow if image is larger than container */
+  margin: 0 auto;
+  text-align: center; /* Centers the image if it's not full-width */
+}
+
+/* Styles for your banner image */
+header img.banner {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-width: 1200px; /* Matches your image width */
+  margin: 0 auto; /* Centers the image horizontally */
+}
