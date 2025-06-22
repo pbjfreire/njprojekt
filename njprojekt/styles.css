@@ -1,4 +1,4 @@
-/* ===== CORE STYLES ===== */
+/* ===== HARD RESET ===== */
 * {
   margin: 0;
   padding: 0;
@@ -6,43 +6,58 @@
 }
 
 html, body {
-  height: 100%;
+  width: 100%;
+  min-height: 100vh;
+  background: white !important;
   overflow-x: hidden;
-  background: white; /* Added this line */
 }
 
-body {
-  font-family: Arial, sans-serif;
-  text-align: center;
-  line-height: 1.5;
-  color: #000;
-  display: flex;
-  flex-direction: column;
-  background: white; /* Ensures white background */
-}
-
-/* ===== LIST FIX ===== */
-ul {
-  list-style-type: none; /* Removes dots */
-  padding-left: 0;       /* Removes indentation */
-}
-
-/* ===== BANNER CONTAINER ===== */
+/* ===== BANNER ===== */
 header {
-  width: 100vw;
+  width: 100%;
   height: 75vh;
   max-height: 900px;
-  position: relative;
-  background: white; /* White background around image */
-  margin: 0;
-  padding: 0;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .banner {
-  width: 100%;
   height: 100%;
+  width: auto;
+  max-width: 100%;
   object-fit: contain;
-  object-position: center top;
-  display: block;
-  margin: 0 auto;
+}
+
+/* ===== CONTENT ===== */
+main {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 20px;
+}
+
+/* ===== BULLET POINT FIX ===== */
+ul, .main-menu, #navigation, [role="list"] {
+  list-style: none !important;
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+}
+
+ul li::before {
+  content: "" !important;
+  display: none !important;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  padding: 1.5rem;
+  background: white;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  header {
+    height: 60vh;
+  }
 }
