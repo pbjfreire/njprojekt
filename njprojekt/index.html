@@ -1,24 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-cf-pages>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NJ Projekt - Comics & Art</title>
-  <link rel="stylesheet" href="styles.css">
-  <!-- Preload optimized banner -->
+  <link rel="stylesheet" href="styles.css?v=4">
   <link rel="preload" href="images/banner-1000x750.webp" as="image" type="image/webp">
+  <!-- Critical CSS -->
+  <style>
+    header {
+      width: 100%;
+      background: #f0f0f0;
+      overflow: hidden;
+    }
+    header img.banner {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <!-- Updated banner with new dimensions -->
-    <img src="images/banner.png" 
-         alt="NJ Projekt Banner" 
+    <img src="images/banner-1000x750.webp"
+         alt="NJ Projekt Banner"
          class="banner"
-         width="1000" 
+         width="1000"
          height="750"
-         loading="eager">
+         loading="eager"
+         decoding="async">
   </header>
-  
+
   <main>
     <h1>Welcome to my comics and art!</h1>
     <p>Explore my work:</p>
@@ -28,7 +40,7 @@
       <li><a href="blog.html">Blog</a></li>
     </ul>
   </main>
-  
+
   <footer>
     <p>© 2025 NJ Projekt. All rights reserved.</p>
   </footer>
