@@ -4,22 +4,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NJ Projekt - Comics & Art</title>
-  <link rel="stylesheet" href="styles.css?v=centered-final">
+  <link rel="stylesheet" href="styles.css?v=dynamic-class">
   <style>
-    /* Critical CSS (loads first) */
+    /* Critical CSS (now without !important) */
     body {
-      background: white !important;
-      text-align: center !important;
+      background: white;
+      text-align: center;
       margin: 0;
       padding: 0;
     }
-    ul {
-      list-style: none !important;
-      padding-left: 0 !important;
-      display: inline-block !important;
-      text-align: left !important;
+    body .centered-list {
+      list-style: none;
+      padding-left: 0;
+      display: inline-block;
+      text-align: left;
     }
   </style>
+  <script>
+    // Auto-add .dev-mode class on pages.dev or ?dev=true
+    if (window.location.hostname.includes('pages.dev') || 
+        new URLSearchParams(window.location.search).has('dev')) {
+      document.body.classList.add('dev-mode');
+    }
+  </script>
 </head>
 <body>
   <header>
@@ -31,9 +38,9 @@
   </header>
 
   <main>
-    <h1>Welcome to my comics and art!</h1>
+    <h1>Welcome!</h1>
     <p>Explore my work:</p>
-    <ul>
+    <ul class="centered-list">
       <li><a href="art.html">Art Gallery</a></li>
       <li><a href="comics.html">Comics</a></li>
       <li><a href="blog.html">Blog</a></li>
