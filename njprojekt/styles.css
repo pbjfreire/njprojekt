@@ -1,8 +1,12 @@
-/* ===== RESET & BASE STYLES ===== */
+/* ===== CORE RESET ===== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
 }
 
 body {
@@ -11,28 +15,35 @@ body {
   color: #000;
   text-align: center;
   line-height: 1.5;
+  display: flex;
+  flex-direction: column;
 }
 
-/* ===== BANNER (1000x750) ===== */
+/* ===== BANNER FIXES ===== */
 header {
   width: 100%;
-  background: #f0f0f0; /* Fallback color */
+  position: relative;
+  aspect-ratio: 4/3;
+  max-height: 80vh;
   margin: 0 auto;
-  max-height: 90vh; /* Prevents vertical scrolling */
-  overflow: hidden;
+  background: #f0f0f0;
 }
 
 header img.banner {
   width: 100%;
-  max-width: 1000px; /* Matches new image width */
-  height: auto;
-  display: block;
-  margin: 0 auto;
+  height: 100%;
   object-fit: contain;
+  object-position: center;
 }
 
-/* ===== CONTENT ===== */
+/* Cloudflare Pages.dev fix */
+html[data-cf-pages] header img.banner {
+  object-position: center top;
+}
+
+/* ===== CONTENT AREA ===== */
 main {
+  flex: 1;
   padding: 2rem 1rem;
   max-width: 800px;
   margin: 0 auto;
@@ -64,16 +75,20 @@ a:hover {
 /* ===== FOOTER ===== */
 footer {
   padding: 1.5rem;
-  margin-top: 2rem;
 }
 
-/* ===== MOBILE RESPONSIVENESS ===== */
+/* ===== MOBILE RESPONSIVE ===== */
 @media (max-width: 768px) {
   header {
-    max-height: 70vh; /* Smaller header on mobile */
+    aspect-ratio: 3/2;
+    max-height: 60vh;
   }
   
-  header img.banner {
-    max-width: 100%; /* Full width on small screens */
+  main {
+    padding: 1rem;
   }
 }
+
+/* Debug borders (remove after testing) */
+.debug header { outline: 2px solid red; }
+.debug header img { outline: 2px solid blue; }
