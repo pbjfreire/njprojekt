@@ -4,29 +4,30 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NJ Projekt - Comics & Art</title>
-  <link rel="stylesheet" href="styles.css?v=final2">
+  <link rel="stylesheet" href="styles.css?v=highres">
+  <!-- Preload high-res image -->
+  <link rel="preload" href="images/banner-1200x900.webp" as="image" type="image/webp">
   <style>
-    /* Instant-load styles */
+    /* Critical CSS */
     header {
-      background: #f0f0f0; /* Fallback while image loads */
-    }
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.5;
-      color: #000;
+      background: #f0f0f0;
+      width: 100%;
+      overflow: hidden;
     }
   </style>
 </head>
 <body>
   <header>
+    <!-- Original high-res image (now scaled in CSS) -->
     <img src="images/banner.png"
          alt="NJ Projekt Banner"
          class="banner"
-         width="1000"
-         height="750"
+         width="1200"
+         height="900"
          loading="eager">
   </header>
 
+  <!-- Rest of your content remains unchanged -->
   <main>
     <h1>Welcome to my comics and art!</h1>
     <p>Explore my work:</p>
